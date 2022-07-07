@@ -1,0 +1,43 @@
+version: "3.3"
+services:
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - "9090:9090"
+    configs:
+      - source: mycfg
+        target: /etc/prometheus/prometheus.yml
+    networks:
+      - trnet
+
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3000:3000"
+    networks:
+      - trnet
+
+  node-exporter:
+    image: prom/node-exporter
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
+    command: 
+      - '--path.procfs=/host/proc' 
+      - '--path.sysfs=/host/sys'
+      - --collector.filesystem.ignored-mount-points
+      - "^/(sys|proc|dev|host|etc|rootfs/var/lib/docker/containers|rootfs/var/lib/docker/overlay2|rootfs/run/docker/netns|rootfs/var/lib/docker/aufs)($$|/)"
+    ports:
+      - 9100:9100
+    networks:
+      - trnet
+      
+networks:
+  trnet:
+    external: true
+
+configs:
+  mycfg:
+    external:
+      name: promcfg1

@@ -1,0 +1,14 @@
+version: "3.3"
+
+services:
+  samplewebapp:
+    image: marcideak/samplewebapp
+      
+    ports:
+      - "8001:80"
+    networks:
+      - trnet
+  
+networks:
+   trnet:
+     external: true
