@@ -28,4 +28,4 @@ docker image will be built, and pushed to my repository
 
 
 ## if you clone this
-** don't forget to change the docker image tagging from azitmentor (this is my docker hub account), to your docker hub account
+** don't forget to change the docker image tagging from deakmarci (this is my docker hub account), to your docker hub account
