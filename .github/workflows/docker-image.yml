@@ -9,9 +9,8 @@ on:
 jobs:
 
   build:
-
-   runs-on: ubuntu-lates
-  # runs-on: self-hosted
+    runs-on: ubuntu-lates
+   #  runs-on: self-hosted
 
     steps:
     - uses: actions/checkout@v3
