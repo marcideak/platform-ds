@@ -1,11 +1,15 @@
 Docker swarm based application platform - with traefik, portainer, prometheus, grafana
+
 Get a free linux (preferred: Ubuntu 20.04 LTS) from any of the cloud providers (google, aws, azure, oracle)
+
 First steps till the portainer platform:
+
 In linux terminal (refresh your linux repo, update your installation):
 
 sudo apt update
 sudo apt install
 sudo reboot
+
 Install portainer
 (based on: https://docs.portainer.io/v/ce-2.9/start/install/server/swarm/linux)
 
