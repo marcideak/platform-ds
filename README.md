@@ -23,7 +23,7 @@ After this stack deploy, the portainer UI is ready on your public ip(url) at por
 
 http://mypublicipurl:9000
 
-github ci/cd pileline - github action is built in [check the docker-image.yml file] (.github/workflows/docker-image.yml) , so if you modify the .net core application source code, the action will be triggered, docker image will be built, and pushed to my repository
+github ci/cd pipeline - github action is built in [check the docker-image.yml file] (.github/workflows/docker-image.yml) , so if you modify the .net core application source code, the action will be triggered, docker image will be built, and pushed to my repository
 
 if you clone this
 ** don't forget to change the docker image tagging from deakmarci (this is my docker hub account), to your docker hub account
